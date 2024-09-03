@@ -1,7 +1,9 @@
 ﻿@page
+@using System.Diagnostics
 @model MyApp.Namespace.ProcessModel
 @{
     string[]? people = ViewData["People"] as string[];
+    Process[] procs = ViewData["Procs"] as Process[];
 }
 <style>
     h1 {
@@ -23,7 +25,12 @@
             <li>@person</li>
         }
     </ul>
+    @foreach (Process p in procs) {
+        <div>
+            @p.ProcessName
+        </div>
 
+    }
 </div>
 
 
