@@ -1,0 +1,12 @@
+﻿@page
+@using System.Diagnostics
+@model MyApp.Namespace.DetailsModel
+@{
+    Process p = ViewData["Proc"] as Process;
+}
+
+<body>
+    <h2>Details Page</h2>
+    <p>Process Name: @p.ProcessName</p>
+    <p>Number of threads: @p.Threads.Count</p>
+</body>

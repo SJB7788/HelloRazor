@@ -1,0 +1,106 @@
+﻿@page
+@model MyApp.Namespace.ZodiacModel
+@{
+    string? zodiac = ViewData["Zodiac"] as string;
+    string zodiacFile = Url.Content("~/images/" + zodiac!.ToLower() + ".png");
+}
+<style>
+    #div__year {
+        display: block;
+    }
+
+    #year {
+        display: block;
+        margin-top: 0.25rem;
+    }
+
+    #submit__box {
+        margin-top: 20px;
+    }
+
+    
+    #submit__box button {
+        padding: 5px;
+        width: 100px;
+        height: 35px;
+        border: 0;
+        border-radius: 8%;
+        background-color: #0D6EFD;
+        color: white;
+    }
+
+    #submit__box a {
+        padding: 6px 10px;
+        border: 0;
+        border-radius: 8%;
+        background-color: #198754;
+        color: white;
+        text-decoration: none;
+    }
+
+    #zodiac_results {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(61, 231, 61, 0.471);
+        padding: 30px;
+        height: 350px;
+        width: 350px;
+        border: 1px solid green;
+        border-radius: 10px;
+    }
+
+    #zodiac_results h5 {
+        color: green;
+    }
+
+    #zodiac_results span {
+        font-weight: bold;
+    }
+
+    #zodiac_error {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 112, 112, 0.379);
+        padding: 30px;
+        height: 125px;
+        width: 450px;
+        border: 1px solid rgb(139, 0, 0) ;
+        border-radius: 10px;
+    }
+
+    #zodiac_error h5 {
+        color: rgb(139, 0, 0);
+    }
+</style>
+
+<form method="post">
+    <div id="div__year">
+        <label asp-for="Year">Year</label>
+        <input asp-for="Year" id="year" type="int">
+    </div>
+    <div id="submit__box">
+        <button  type="submit">
+            Get Zodiac
+        </button>
+        <a asp-action="Zodiac">Clear</a>
+    </div>
+</form>
+
+@if (@zodiac!.Length > 0 && @zodiac!.ToString() != "Error")
+{
+    <div id="zodiac_results">
+        <img src="@zodiacFile" alt=""/>
+        <h5>Your zodiac is <span>@zodiac.</span></h5>
+    </div>
+} 
+@if (@zodiac!.ToString() == "Error") {
+    <div id="zodiac_error">
+        <h5>Year must be between 1900 and next year. Please Try Again.</h5>
+    </div>
+}
