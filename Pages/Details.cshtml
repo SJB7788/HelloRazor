@@ -1,12 +1,16 @@
 ﻿@page
-@using System.Diagnostics
-@model MyApp.Namespace.DetailsModel
+@model NorthwindHCI.Pages.DetailsModel
 @{
-    Process p = ViewData["Proc"] as Process;
+    var queryList = Model.query;
+
 }
 
-<body>
-    <h2>Details Page</h2>
-    <p>Process Name: @p.ProcessName</p>
-    <p>Number of threads: @p.Threads.Count</p>
-</body>
+<div>
+    <h2>Details:</h2>
+    @foreach (var item in queryList)
+    {
+        <p>@item.CategoryId</p>
+        <p>@item.CategoryName</p>
+        <p>@item.Description</p>
+    }
+</div>
