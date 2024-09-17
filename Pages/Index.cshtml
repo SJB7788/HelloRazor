@@ -1,13 +1,10 @@
 ﻿@page
 @model IndexModel
-@using NorthwindHCI.Models.NW
 @{
     ViewData["Title"] = "Home page";
 }
 
 <div class="text-center">
-    @foreach (Category category in Model.CategoriesInDB!)
-    {
-        <p><a asp-page="./Details" asp-route-categoryName="@category.CategoryName">@category.CategoryName</a></p>   
-    }
+    <h1 class="display-4">COMP 4952</h1>
+    <p>SeungJae Baek</p>
 </div>

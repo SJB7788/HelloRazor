@@ -1,0 +1,43 @@
+﻿@page
+@using System.Diagnostics
+@model MyApp.Namespace.ProcessModel
+@{
+    string[]? people = ViewData["People"] as string[];
+    Process[]? procs = ViewData["Procs"] as Process[];
+}
+<style>
+    h1 {
+        color: black;
+        transition: color .5s ease-in-out ;
+        font-weight: 900;
+    }
+
+    h1:hover {
+        color: red;
+    }
+</style>
+<div>
+    <h1>HELLO I Am SEUNG JAE</h1>
+    <h2>Process Page</h2>
+    
+    <p>@ViewData["Message"]</p>
+    
+    <ul>
+        @foreach (string person in people!) {
+            <li>@person</li>
+        }
+    </ul>
+    
+    @foreach (Process p in procs!) {
+        <div>
+            @if (p.ProcessName.Trim().Length > 0)
+            {
+                <p><a asp-page="./Details" asp-route-id="@p.Id">@p.ProcessName</a></p>
+            }
+        </div>
+    }
+
+
+</div>
+
+

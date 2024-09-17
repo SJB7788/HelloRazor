@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthwindHCI", "NorthwindHCI.csproj", "{99F8FE22-7302-4917-93EA-59AC79E63D81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloRazor", "HelloRazor.csproj", "{DFFD4DBC-CBA3-4EED-928F-0DFC114B17F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{99F8FE22-7302-4917-93EA-59AC79E63D81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{99F8FE22-7302-4917-93EA-59AC79E63D81}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{99F8FE22-7302-4917-93EA-59AC79E63D81}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{99F8FE22-7302-4917-93EA-59AC79E63D81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFFD4DBC-CBA3-4EED-928F-0DFC114B17F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFFD4DBC-CBA3-4EED-928F-0DFC114B17F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFFD4DBC-CBA3-4EED-928F-0DFC114B17F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFFD4DBC-CBA3-4EED-928F-0DFC114B17F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {6B57C724-34C1-4942-B49D-A785238DEF57}
+		SolutionGuid = {3F36B5FC-2478-4203-816F-AA62471FEDCC}
 	EndGlobalSection
 EndGlobal

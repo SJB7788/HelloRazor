@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace NorthwindHCI.Pages;
+namespace HelloRazor.Pages;
 
 public class PrivacyModel : PageModel
 {
