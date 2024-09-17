@@ -1,15 +1,18 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Diagnostics;
+using NorthwindHCI.Models.NW;
 
-namespace MyApp.Namespace
+namespace NorthwindHCI.Pages
 {
     public class DetailsModel : PageModel
     {
-        public void OnGet(int? id)
+        public IQueryable<NorthwindHCI.Models.NW.Category> query;
+        public void OnGet(string? categoryName)
         {
-            Process proc = Process.GetProcessById(id!.Value);
-            ViewData["Proc"] = proc;   
+            NorthwindContext _context = new();
+            query = _context.Categories.Where(
+                c => c.CategoryName.Equals(categoryName)
+            );
         }
     }
 }
